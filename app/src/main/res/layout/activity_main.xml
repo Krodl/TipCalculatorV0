@@ -6,42 +6,78 @@
     android:layout_height="match_parent"
     tools:context="com.example.amkro.tipcalculatorv0.MainActivity">
 
-    <TextView
-        android:id="@+id/label_bill"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:minWidth="120dp"
-        android:textSize="28sp"
-        android:text="@+string/label_bill"/>
     <EditText
         android:id="@+id/amount_bill"
-        android:layout_width="wrap_content"
+        android:layout_width="217dp"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/label_bill"
+        android:layout_marginEnd="90dp"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="34dp"
+        android:ems="10"
+        android:hint="Bill Amount"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        android:layout_alignBottom="@+id/label_bill"
-        android:layout_alignParentRight="true"
-        android:textSize="28sp"
-        android:hint="@+string/amount_bill_hint"
-        android:inputType="numberDecimal"/>
     <TextView
-        android:id="@+id/label_tip_percent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/label_bill"
-        android:layout_alignLeft="@id/label_bill"
-        android:layout_alignRight="@+id/label_bill"
-        android:textSize="28sp"
-        android:text="@+string/label_tip_percent"/>
+        android:id="@+id/amount_tip"
+        android:layout_width="97dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="144dp"
+        android:text="Tip ($)"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="290dp"
+        android:layout_marginLeft="144dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/amount_total"
+        android:layout_width="90dp"
+        android:layout_height="43dp"
+        android:layout_marginBottom="136dp"
+        android:layout_marginStart="144dp"
+        android:text="Total"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="144dp" />
+
+    <Button
+        android:id="@+id/calculate"
+        android:layout_width="170dp"
+        android:layout_height="56dp"
+        android:layout_marginEnd="107dp"
+        android:layout_marginStart="107dp"
+        android:backgroundTint="@android:color/holo_green_dark"
+        android:text="CALCULATE"
+        android:textSize="25sp"
+        android:onClick="calculate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="177dp"
+        tools:ignore="MissingConstraints" />
+
+
     <EditText
-        android:id="@+id/amount_trip_percent"
+        android:id="@+id/amount_tip_percent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/label_tip_percent"
-        android:layout_alignBottom="@+id/amount_bill"
-        android:layout_alignRight="@+id/amount_bill"
-        android:textSize="28sp"
-        android:hint="@+string/amount_tip_percent_hint"
-        android:inputType="number"/>
+        android:layout_marginBottom="48dp"
+        android:layout_marginEnd="85dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="Tip (%)"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText2"
+        android:layout_marginRight="85dp"
+        android:layout_marginLeft="84dp"
+        tools:ignore="UnknownId" />
 
 </android.support.constraint.ConstraintLayout>
